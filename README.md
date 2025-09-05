@@ -86,3 +86,11 @@ Die REST-API gibt standardmäßig alle Antworten im **JSON-Format** zurück (Jav
 |<mark>groesstkorn</mark> | <mark>int (Enum) / null</mark> |Gibt das aus dem Bild ermittelte Größtkorn [mm] an. Mögliche Werte: <mark>8, 16, 32</mark>||
 |<mark>sieblinie</mark> | <mark>string (Enum) / null</mark> |	Gibt eine grobe Einschätzung der Siebline **(Achtung: dient nur als Richtwert, mit Ungenauigkeiten behaftet)**. Mögliche Werte: <mark>A, AB, B, BC, C</mark> ||
 |<mark>shapeMetrics</mark>|	<mark>object</mark> |	Objekt mit alternativen Beschreibungen des Durchmessers und zusätzlichen Form-Parametern, die die Form und Ausprägung des Ausbreitkuchens beschreiben ||
+
+
+---
+![Logo](assets/conQrete-signet.jpg)
+<br>
+conqrete.tech
+<br>
+mail@conqrete.tech
