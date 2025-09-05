@@ -1,11 +1,10 @@
 # Qflow-API - Benutzerdokumentation -
-$\require{bbox}$
 
 ## Hinweise für Entwickler
 Die Schnittstelle ist eine REST-API, die den Zugriff über einen POST-Request ermöglicht. Für jede Anfrage sind folgende Angaben erforderlich:
 
 - Endpoint: Die URL der API, z. B.: <mark>https://your-api-endpoint.com/api/v1/model/</mark>
-- Authentifizierung: Ein gültiger Bearer Token, der im HTTP-Header als $\bbox[background:#fffb00]{\color{black}{\text{Authorization}}}$ übergeben wird.
+- Authentifizierung: Ein gültiger Bearer Token, der im HTTP-Header als <mark>Authorization</mark> übergeben wird.
 Zum Erhalt des Endpoint-Zugangs sowie einer gültigen Authentifizierung kontaktieren Sie bitte das Team von conQrete! 
 
 ⚠️ Hinweis: Der Token ist __vertraulich__ zu behandeln und darf nicht öffentlich geteilt oder im Frontend-Code hardcodiert werden.
