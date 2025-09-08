@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{{ page.title | default: site.title | default: "Site" }}</title>
 
-    <!-- GitHub 스타일의 마크다운 CSS 적용 -->
+    <!-- Apply GitHub-style markdown CSS -->
     <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css" />
 
-    <!-- 약간의 레이아웃 보정 -->
+    <!-- Minor layout adjustments -->
     <style>
-      /* 본문 폭과 여백 */
+      /* Content width and padding */
       .markdown-body {
         box-sizing: border-box;
         max-width: 1440px;
         margin: 0 auto;
-        /* padding: 16px; */
+        padding: 16px;
       }
-      /* 이미지가 넘치지 않도록 */
+      /* Prevent images from overflowing */
       .markdown-body img {
         max-width: 100%;
         height: auto;
       }
-      /* 표/코드가 넘칠 때 가로 스크롤 */
+      /* Horizontal scroll for wide tables/code blocks */
       .markdown-body table {
         display: block;
         width: 100%;
@@ -35,17 +35,17 @@
         word-wrap: normal;
         white-space: pre;
       }
-      /* 긴 단어/링크 줄바꿈 */
+      /* Long words/links wrapping (optional) */
       .markdown-body * {
         /* word-break: break-word; */
       }
-      /* 수식 블록 가운데 정렬 느낌 살리기(선택) */
+      /* Tweak math block line-height (optional) */
       .markdown-body .MathJax, .markdown-body mjx-container {
         line-height: 1.2;
       }
     </style>
 
-    <!-- MathJax 설정/로더 -->
+    <!-- MathJax config/loader -->
     <script>
       window.MathJax = {
         tex: {
