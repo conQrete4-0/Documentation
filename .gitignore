@@ -9,7 +9,7 @@ Thumbs.db
 site/
 _build/
 dist/
-*.html
+# *.html
 
 
 __pycache__/
