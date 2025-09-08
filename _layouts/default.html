@@ -1,13 +1,64 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    {% if page.mathjax %}
-      {% include mathjax.html %}
-    {% endif %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ page.title | default: site.title | default: "Site" }}</title>
+
+    <!-- GitHub 스타일의 마크다운 CSS 적용 -->
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css" />
+
+    <!-- 약간의 레이아웃 보정 -->
+    <style>
+      /* 본문 폭과 여백 */
+      .markdown-body {
+        box-sizing: border-box;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 16px;
+      }
+      /* 이미지가 넘치지 않도록 */
+      .markdown-body img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* 표/코드가 넘칠 때 가로 스크롤 */
+      .markdown-body table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+      }
+      .markdown-body pre {
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        word-wrap: normal;
+        white-space: pre;
+      }
+      /* 긴 단어/링크 줄바꿈 */
+      .markdown-body * {
+        word-break: break-word;
+      }
+      /* 수식 블록 가운데 정렬 느낌 살리기(선택) */
+      .markdown-body .MathJax, .markdown-body mjx-container {
+        line-height: 1.2;
+      }
+    </style>
+
+    <!-- MathJax 설정/로더 -->
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']]
+        }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
   </head>
   <body>
-    {{ content }}
+    <article class="markdown-body">
+      {{ content }}
+    </article>
   </body>
 </html>
